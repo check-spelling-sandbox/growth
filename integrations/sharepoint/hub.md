@@ -2,7 +2,7 @@
 
 ## Overview
 
-The sharepoint library connector integration allows you to setup a connector between a document library in a sharepoint site and a KB in botpress.
+The sharepoint library connector integration allows you to set up a connector between a document library in a sharepoint site and a KB in botpress.
 
 ## Configuration
 
@@ -32,7 +32,7 @@ Add the following keys to the integration’s `configuration` block:
 
 ## How to's
 
-### How to register a app on Microsoft Entra admin center
+### How to register an app on Microsoft Entra admin center
 
 - From the Home page of Microsoft Entra admin center, Open App registrations ( This is under Applications in the Left Nav )
 - Add a new registration by clicking on “+ New registration”
@@ -43,7 +43,7 @@ Add the following keys to the integration’s `configuration` block:
 
 ### How to create a certificate for your app registration
 
-- We will be using a self signed certificate to authenticate, to create a self signed certificate run the following commands in order
+- We will be using a self-signed certificate to authenticate, to create a self-signed certificate run the following commands in order
 - `openssl genrsa -out myPrivateKey.key 2048` → This will generate a 2048-bit private key and save it as myPrivateKey.key.
 - `openssl req -new -key myPrivateKey.key -out myCertificate.csr` → This will create a CSR cert. You will be prompted to enter some information, fill as needed.
 - `openssl x509 -req -days 365 -in myCertificate.csr -signkey myPrivateKey.key -out myCertificate.crt` → This will create a certificate file named myCertificate.crt that is valid for 365 days.
@@ -99,7 +99,7 @@ Sometimes one SharePoint document library contains several distinct collections 
 ### Rules & limitations
 1. **No KB sharing across libraries.** A single KB **cannot** receive content from two different libraries—even via folder mapping.  
 2. **Create KBs first.** All KB IDs used in `folderKbMap` must already exist in Botpress before you save the configuration.
-3. **Recursive files** Every file within a document library, regardles whether it is in a nested folder - will be recursively copied.
+3. **Recursive files** Every file within a document library, regardless whether it is in a nested folder - will be recursively copied.
 
 ### Quick checklist
 | ✔ | Step |

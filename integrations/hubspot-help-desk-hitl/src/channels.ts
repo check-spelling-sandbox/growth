@@ -12,7 +12,7 @@ export const channels = {
         const hubspotConversationId = conversation.tags.id
 
         if (!hubspotConversationId?.length) {
-          logger.forBot().error('No HubSpot Conversation Id')
+          logger.forBot().error('No HubSpot Conversation ID')
           return
         }
         
@@ -44,7 +44,7 @@ export const channels = {
 
         const { name } = userInfoState.state.payload;
         
-        // Prefer phone number if available, otherwise use email
+        // Prefer phone number if available; otherwise, use email
         const contactIdentifier = userPhoneNumber || userEmail!;
         if (userPhoneNumber) {
           logger.forBot().info(`Using phone number for message: ${userPhoneNumber}`);
